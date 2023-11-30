@@ -1,0 +1,9 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/docker-aws', '.']
+
+# Print version information.
+- name: gcr.io/$PROJECT_ID/docker-aws
+  args: ['--version']
+
+images: ['gcr.io/$PROJECT_ID/docker-aws']
